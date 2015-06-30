@@ -122,6 +122,9 @@ def mft_raw_by_drive(drive='C'):
     return mft_data
 
 
-if __name__ == '__main__':
-    data = mft_raw_by_drive('C')
+def save_mft_by_drive(drive="C"):
+    data = mft_raw_by_drive(drive)
     open('mft_c', 'wb').write(data)
+
+if __name__ == '__main__':
+    save_mft_by_drive()
